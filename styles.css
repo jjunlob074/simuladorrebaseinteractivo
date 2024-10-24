@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 40px;
+    background-color: #333;
+    color: #111;
+}
+h1 {
+    color: white;
+}
+h4 {
+    color: #ffcc80;
+}
+#commitList li {
+    list-style-type: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+#commitList li:hover {
+    background-color: #e9e9e9; /* Cambia el fondo al pasar el ratón */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil al pasar el ratón */
+}
+
+#commitList li.dragging {
+    opacity: 0.5;
+    background-color: #d9d9d9; /* Color de fondo mientras se arrastra */
+}
+
+#commitList li.over {
+    border: 2px dashed #000; /* Borde cuando un elemento está encima durante el arrastre */
+}
+
+button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #5c87b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #7a9bc3; /* Color al pasar el ratón */
+    transform: translateY(-1px); /* Elevación ligera al pasar el ratón */
+}
+
+button:active {
+    transform: translateY(1px); /* Efecto de presión al hacer clic */
+}
+
+/* Transiciones suaves para toda la lista y sus elementos */
+#commitList {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Añadir transición suave al reordenar los commits */
+#commitList li {
+    transition: transform 0.3s ease-in-out;
+}
+#commitList li.selected {
+    background-color: #ffcc80; /* Color naranja suave */
+}
+
+#rebaseGuide {
+    background-color: #444; /* Un poco más oscuro que el fondo principal para destacar */
+    color: #ddd; /* Texto claro para contraste */
+    border: 1px solid #555; /* Bordes sutiles */
+    padding: 20px; /* Espaciado interior generoso */
+    border-radius: 8px; /* Bordes redondeados para la coherencia */
+    margin-top: 20px; /* Separación del contenido principal */
+}
+
+#rebaseGuide h2, h3 {
+    color: #ade; /* Color sutilmente diferente para el título */
+}
+
+#rebaseGuide ul {
+    padding-left: 20px; /* Alineación de la lista */
+}
+
+#rebaseGuide li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+#datos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

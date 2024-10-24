@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git Rebase Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Git Rebase Interactive Simulator</h1>
+    <div id="commitContainer">
+        <ul id="commitList">
+            <!-- Los commits se añadirán dinámicamente aquí -->
+        </ul>
+    </div>
+    <button id="RebaseButton">Rebase -i HEAD~n</button>
+    <div id="rebaseGuide">
+        <h2>Rebase Actions Guide</h2>
+        <ul>
+            <li><strong>Pick</strong>: Mantener el commit tal como está.</li>
+            <li><strong>Reword</strong>: Mantener el contenido del commit pero editar el mensaje del commit.</li>
+            <li><strong>Edit</strong>: Detener el rebase en ese commit para que puedas modificar los archivos o agregar más cambios y hacer un nuevo commit.</li>
+            <li><strong>Squash</strong>: Combinar este commit con el anterior, integrando ambos cambios pero te permitirá editar el mensaje del commit.</li>
+            <li><strong>Fixup</strong>: Similar a squash, pero descarta el mensaje de este commit y solo mantiene el mensaje del commit anterior.</li>
+            <li><strong>Drop</strong>: Eliminar completamente el commit de la historia.</li>
+        </ul>
+        <h4>NOTA: Si clickas sobre un commit lo selecciona y si clickas sobre otro intercambia las posiciones</h4>
+    </div>
+    <div id="datos">
+        <div id="recuerda">
+            <h3>RECUERDA QUE EN LA REALIDAD, EN CONSOLA SALDRÍA ASÍ, PERO EL CONCEPTO ES EL MISMO</h3>
+            <img src="https://ardupilot.org/dev/_images/git-interactive-rebase-top-image.png">
+        </div>
+        <h4> CREADO POR JOSE DIEGO JUNQUERA LOBÓN</h4>
+    <script src="script.js"></script>
+</body>
+</html>
